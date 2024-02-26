@@ -1,7 +1,7 @@
-import { css } from "../../styled-system/css";
+import { css } from "../../../styled-system/css";
 
-export default function Home() {
-  const CHESS_CONTRACT = process.env.CHESS_CONTRACT;
+export default function Game({ params }) {
+  let { game_id } = params;
 
   return (
     <main>
@@ -10,8 +10,7 @@ export default function Home() {
       </h1>
       <h2
         className={css({ fontSize: "lg", fontWeight: "bold" })}
-      >{`Total Games: XX`}</h2>
-      <div>Contract address: {CHESS_CONTRACT}</div>
+      >{`Game Number: ${game_id}`}</h2>
     </main>
   );
 }
